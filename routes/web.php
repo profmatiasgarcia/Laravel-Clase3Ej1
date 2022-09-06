@@ -11,7 +11,7 @@ Route::get('/', function () {
 
 /*Route::get('productos', function(){
 	dd(\App\Producto::all());
-});*/
+})->name('producto.index');*/
 
 route::get('productos', [ProductoController::class, 'index'])->name('producto.index');
 route::get('productos/crear', [ProductoController::class, 'create'])->name('producto.create');
